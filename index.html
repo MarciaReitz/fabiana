@@ -1224,6 +1224,15 @@
     /* Fix: list items inside white testimonial cards must be dark */
     .testimonial-card .sessao-list li { color: #444; }
     .testimonial-card .sessao-list .bullet { color: var(--color-secondary); }
+
+    /* ---- Mobile refinements (progressive enhancement) ---- */
+    html { -webkit-text-size-adjust: 100%; }
+    img, video { height: auto; }
+    @media (max-width: 480px) {
+      .container { width: 92%; }
+      .btn-primary, .btn-amazon, .accordion-btn { min-height: 44px; }
+      .section-title { letter-spacing: 1px; }
+    }
 </style>
 </head>
 
@@ -1237,6 +1246,8 @@
     <!-- IMAGEM DE FUNDO TOTAL -->
     <img
       class="hero-bg-img"
+      fetchpriority="high"
+      decoding="async"
       src="homem na montanha.png"
       alt=""
       aria-hidden="true"
@@ -1343,7 +1354,7 @@
         <div class="quem-text fade-in">
           <span class="gold-line gold-line--left"></span>
           <h2 class="section-title section-title--light">
-            Estratégia emocional é clareza, é direção, é método
+            Estratégia Emocional<br />é clareza<br />é direção<br />é método
           </h2>
 
           
@@ -1392,7 +1403,7 @@
               src="fabiana-foto.jpg"
               alt="Foto de Fabiana Sá"
               style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </div>
 
@@ -1551,7 +1562,7 @@
               <img
                 src="capa livro 1 amar.jpg"
                 alt="Capa do livro Amar sem se Abandonar — Fabiana Sá"
-                loading="lazy"
+                loading="lazy" decoding="async"
               />
             </div>
           </a>
@@ -1665,6 +1676,22 @@
           <div class="accordion-body" id="faq4" role="region">
             <p>
               Sim. O trabalho é adaptado ao seu momento de vida e ao cenário que você está enfrentando independentemente do seu estado civil.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item fade-in" role="listitem">
+          <button
+            class="accordion-btn"
+            aria-expanded="false"
+            aria-controls="faq5"
+          >
+            Em quanto tempo terei resultado?
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-body" id="faq5" role="region">
+            <p>
+              Cada cenário possui sua complexidade. O trabalho tem como objetivo oferecer clareza, estratégia e direção desde o início. Os resultados dependerão das particularidades de cada caso e do comprometimento de cada cliente.
             </p>
           </div>
         </div>
