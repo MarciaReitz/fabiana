@@ -1220,7 +1220,11 @@
       .btn-primary { padding: 0.9rem 1.8rem; font-size: 0.9rem; }
       .hero-h1 { font-size: 1.7rem; }
     }
-  </style>
+  
+    /* Fix: list items inside white testimonial cards must be dark */
+    .testimonial-card .sessao-list li { color: #444; }
+    .testimonial-card .sessao-list .bullet { color: var(--color-secondary); }
+</style>
 </head>
 
 <body>
@@ -1339,32 +1343,10 @@
         <div class="quem-text fade-in">
           <span class="gold-line gold-line--left"></span>
           <h2 class="section-title section-title--light">
-            Estratégia emocional é clareza<br />é direção<br />é método
+            Estratégia emocional é clareza, é direção, é método
           </h2>
 
-          <p>
-            Fabiana Sá é Estrategista Emocional especializada em homens de Alta Performance.
-            Com atuação em Crise Relacional consigo e/ou amorosa, ela trabalha com precisão onde outros trabalham
-            com escuta. Seu método combina estrutura, direção e padrão — porque homens que
-            performam no mais alto nível precisam de ferramentas à altura do que vivem.
-          </p>
-
-          <!--
-            ══════════════════════════════════════════
-            HISTÓRIA PESSOAL — preencher com Fabiana
-            Ex: o que a levou a trabalhar com homens,
-            uma virada na sua própria trajetória,
-            por que esse público específico.
-            ══════════════════════════════════════════
-          -->
-          <div class="quem-story">
-            <p>
-              "[Espaço para a história pessoal da Fabiana — o que a trouxe até este trabalho,
-              o momento de virada, por que escolheu atender especificamente homens de alta
-              performance. Quanto mais real e específico, mais converte.]"
-            </p>
-          </div>
-
+          
           <p>
             Não é sobre se limitar aos sentimentos. É sobre compreender o que está acontecendo,
             recuperar clareza e agir com inteligência.
@@ -1378,8 +1360,8 @@
             </div>
             <div class="stat-divider" aria-hidden="true"></div>
             <div class="stat-item">
-              <span class="stat-number">12</span>
-              <span class="stat-label">Anos — Analisando comportamentos em contexto de alta complexidade.</span>
+              <span class="stat-number">12 anos</span>
+              <span class="stat-label">Analisando comportamentos em contexto de alta complexidade.</span>
             </div>
             <div class="stat-divider" aria-hidden="true"></div>
             <div class="stat-item">
@@ -1401,15 +1383,7 @@
             Ajuste os números acima com os dados reais da Fabiana.
           -->
 
-          <div class="pillars">
-            <span class="pillar-badge">Leitura</span>
-            <span class="pillar-badge">Precisão</span>
-            <span class="pillar-badge">Estrutura</span>
-            <span class="pillar-badge">Direção</span>
-            <span class="pillar-badge">Padrão</span>
-            <span class="pillar-badge">Estratégia</span>
           </div>
-        </div>
 
         <!-- COLUNA DIREITA: Foto + credenciais -->
         <div class="quem-photo fade-in">
