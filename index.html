@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fabiana Sá — Estrategista Emocional para Homens de Alta Performance. Sessões Privadas para homens em crise relacional ou emocional." />
+  <meta property="og:title" content="Fabiana Sá | Estrategista Emocional para Homens de Alta Performance" />
+  <meta property="og:description" content="Para o homem que é referência para todos — menos para si mesmo. Sessões Privadas com método, estrutura e direção." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <title>Fabiana Sá | Estrategista Emocional para Homens de Alta Performance</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lato:wght@300;400;600&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+    ============================================================ */
+    :root {
+      --color-primary:   #1B2A4A;
+      --color-secondary: #C9A44A;
+      --color-accent:    #2E4272;
+      --color-bg-light:  #F0F2F5;
+      --color-bg-dark:   #0F1B30;
+      --color-text:      #1A1A2E;
+      --color-text-inv:  #FFFFFF;
+      --color-gold-soft: #E8C97A;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Lato', sans-serif;
+      --font-signature: 'Playfair Display', serif;
+      --transition: 0.3s ease;
+      --radius: 8px;
+      --max-width: 1100px;
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text);
+      background: var(--color-bg-light);
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { text-decoration: none; color: inherit; }
+
+    ul { list-style: none; }
+
+    /* ============================================================
+       UTILITY
+    ============================================================ */
+    .container {
+      width: 90%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .gold-line {
+      display: block;
+      width: 80px;
+      height: 2px;
+      background: var(--color-secondary);
+      margin: 0 auto 2rem;
+    }
+
+    .gold-line--left { margin: 0 0 2rem; }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn-primary {
+      display: inline-block;
+      background: var(--color-secondary);
+      color: var(--color-bg-dark);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 1.5px;
+      padding: 1rem 2.5rem;
+      border-radius: var(--radius);
+      text-transform: uppercase;
+      border: 2px solid var(--color-secondary);
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+
+    .btn-primary:hover {
+      background: var(--color-gold-soft);
+      border-color: var(--color-gold-soft);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(201,164,74,0.35);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--color-secondary);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      padding: 0.65rem 1.4rem;
+      border-radius: var(--radius);
+      text-transform: uppercase;
+      border: 2px solid var(--color-secondary);
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition), transform var(--transition);
+    }
+
+    .btn-outline:hover {
+      background: var(--color-secondary);
+      color: var(--color-bg-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================
+       SIGNATURE
+    ============================================================ */
+    .signature {
+      font-family: var(--font-signature);
+      color: var(--color-gold-soft);
+      font-size: 1.6rem;
+      display: block;
+      margin-top: 1.5rem;
+    }
+
+    /* ============================================================
+       SECTION TITLES
+    ============================================================ */
+    .section-title {
+      font-family: var(--font-heading);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1.15;
+    }
+
+    .section-title--light { color: var(--color-text-inv); }
+    .section-title--dark  { color: var(--color-primary); }
+
+    /* ============================================================
+       SECTION 1 — HERO (imagem de fundo completa)
+    ============================================================ */
+    #hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+
+    /* Imagem de fundo */
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      z-index: 0;
+    }
+
+    /* Overlay escuro gradiente sobre a imagem */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to right,
+          rgba(15,27,48,0.15) 0%,
+          rgba(15,27,48,0.55) 45%,
+          rgba(15,27,48,0.97) 100%);
+      z-index: 1;
+    }
+
+    /* Overlay adicional inferior para profundidade */
+    .hero-overlay-bottom {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 40%;
+      background: linear-gradient(to top, rgba(15,27,48,0.6), transparent);
+      z-index: 1;
+    }
+
+    /* Coluna da copy — lado direito sobre a imagem */
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      width: 52%;
+      max-width: 600px;
+      padding: 6rem 5rem 6rem 3rem;
+    }
+
+    .hero-content .gold-line {
+      margin: 0 0 1.6rem;
+      width: 50px;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 4px;
+      color: var(--color-secondary);
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-h1 {
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: clamp(1.8rem, 2.8vw, 3rem);
+      color: var(--color-text-inv);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      line-height: 1.12;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--color-secondary);
+      margin-bottom: 1.4rem;
+      opacity: 0.6;
+    }
+
+    .hero-sub {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: clamp(0.92rem, 1.4vw, 1.08rem);
+      color: var(--color-secondary);
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.5px;
+      font-style: italic;
+    }
+
+    .hero-para {
+      color: rgba(255,255,255,0.80);
+      font-size: 0.97rem;
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 2.4rem;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 900px) {
+      #hero { justify-content: center; }
+      .hero-overlay {
+        background: rgba(15,27,48,0.75);
+      }
+      .hero-copy {
+        width: 100%;
+        max-width: 100%;
+        padding: 5rem 2rem 4rem;
+        text-align: center;
+      }
+      .hero-content .gold-line { margin: 0 auto 1.6rem; }
+      .hero-cta-group { align-items: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-copy { padding: 4rem 1.5rem 3rem; }
+      .hero-h1 { font-size: 1.7rem; }
+    }
+
+    /* ============================================================
+       SECTION 2 — DOR
+    ============================================================ */
+    #dor {
+      background: var(--color-bg-light);
+      padding: 5rem 0;
+    }
+
+    #dor .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    #dor .section-title--dark {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .pain-card {
+      background: #fff;
+      border-left: 4px solid var(--color-secondary);
+      border-radius: var(--radius);
+      padding: 1.8rem 1.6rem;
+      box-shadow: 0 2px 12px rgba(27,42,74,0.07);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .pain-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(27,42,74,0.12);
+    }
+
+    .pain-card h3 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 0.82rem;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.75rem;
+    }
+
+    .pain-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    .dor-close {
+      text-align: center;
+      margin-top: 3rem;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       SECTION 3 — QUEM É FABIANA SÁ (ABOUT AMPLIADO)
+    ============================================================ */
+    #quem-e {
+      background: var(--color-primary);
+      padding: 5.5rem 0;
+    }
+
+    .quem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .quem-text .section-title--light {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .quem-text p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+      line-height: 1.9;
+      font-weight: 300;
+      margin-bottom: 1.4rem;
+    }
+
+    .quem-story {
+      border-left: 2px solid rgba(201,164,74,0.4);
+      padding-left: 1.4rem;
+      margin: 1.6rem 0;
+    }
+
+    .quem-story p {
+      font-style: italic;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.97rem;
+    }
+
+    /* Números de autoridade */
+    .stats-row {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .stat-number {
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 2rem;
+      color: var(--color-secondary);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      font-family: var(--font-heading);
+    }
+
+    .stat-divider {
+      width: 1px;
+      background: rgba(201,164,74,0.2);
+      align-self: stretch;
+    }
+
+    .pillars {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+    }
+
+    .pillar-badge {
+      background: transparent;
+      border: 1px solid var(--color-secondary);
+      color: var(--color-secondary);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      padding: 0.4rem 0.9rem;
+      border-radius: 40px;
+      text-transform: uppercase;
+    }
+
+    /* Foto col */
+    .quem-photo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      position: sticky;
+      top: 2rem;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 3/4;
+      border: 2px solid var(--color-secondary);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.04);
+      color: var(--color-secondary);
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201,164,74,0.06), transparent 60%);
+    }
+
+    .photo-placeholder-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .photo-placeholder-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      display: block;
+      opacity: 0.4;
+    }
+
+    /* Formações / credenciais */
+    .credentials {
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .credentials-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
+      color: var(--color-secondary);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .credential-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .credential-item:last-child { border-bottom: none; }
+
+    .credential-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-secondary);
+      flex-shrink: 0;
+      margin-top: 0.35rem;
+    }
+
+    .credential-item span {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .quem-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .quem-photo { position: static; }
+    }
+
+    /* ============================================================
+       SECTION 3B — COMO FUNCIONA
+    ============================================================ */
+    #como-funciona {
+      background: var(--color-bg-light);
+      padding: 5.5rem 0;
+      position: relative;
+    }
+
+    #como-funciona .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    #como-funciona .section-title--dark {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .steps-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      position: relative;
+      align-items: start;
+    }
+
+    /* Linha conectora entre os passos */
+    .steps-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 38px;
+      left: calc(16.66% + 1rem);
+      right: calc(16.66% + 1rem);
+      height: 2px;
+      background: linear-gradient(90deg, var(--color-secondary), rgba(201,164,74,0.3), var(--color-secondary));
+      z-index: 0;
+    }
+
+    .step-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-number-wrap {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      border: 2px solid var(--color-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 20px rgba(27,42,74,0.2);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .step-card:hover .step-number-wrap {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(201,164,74,0.2);
+    }
+
+    .step-number {
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: var(--color-secondary);
+      line-height: 1;
+    }
+
+    .step-icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .step-title {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 0.88rem;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.8rem;
+      line-height: 1.3;
+    }
+
+    .step-desc {
+      color: #666;
+      font-size: 0.93rem;
+      line-height: 1.75;
+    }
+
+    .step-tag {
+      display: inline-block;
+      margin-top: 1rem;
+      background: rgba(27,42,74,0.07);
+      border: 1px solid rgba(27,42,74,0.12);
+      color: var(--color-primary);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      padding: 0.3rem 0.8rem;
+      border-radius: 40px;
+      text-transform: uppercase;
+    }
+
+    .steps-cta {
+      text-align: center;
+      margin-top: 3.5rem;
+    }
+
+    .steps-cta p {
+      color: #888;
+      font-size: 0.85rem;
+      margin-top: 0.8rem;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .steps-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .steps-wrapper::before { display: none; }
+      .step-card { padding: 0 1rem 0; }
+    }
+
+    /* ============================================================
+       SECTION 4 — PROVA SOCIAL
+    ============================================================ */
+    #depoimentos {
+      background: var(--color-bg-light);
+      padding: 5rem 0;
+    }
+
+    #depoimentos .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    #depoimentos .section-title--dark {
+      font-size: clamp(1.3rem, 3vw, 1.85rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .sub-gray {
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border-left: 4px solid var(--color-secondary);
+      border-radius: var(--radius);
+      padding: 2rem 1.8rem 1.8rem;
+      box-shadow: 0 2px 12px rgba(27,42,74,0.07);
+      position: relative;
+      transition: transform var(--transition);
+    }
+
+    .testimonial-card:hover { transform: translateY(-4px); }
+
+    .testimonial-initial {
+      width: 44px;
+      height: 44px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .testimonial-card blockquote {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.8;
+      font-style: italic;
+      margin-bottom: 1.2rem;
+    }
+
+    .testimonial-author {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: var(--color-primary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .testimonials-disclaimer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: #999;
+      font-style: italic;
+    }
+
+    /* ============================================================
+       SECTION 4B — LIVRO
+    ============================================================ */
+    #livro {
+      background: var(--color-primary);
+      padding: 5rem 0;
+      position: relative;
+    }
+
+    #livro .gold-line-top {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #livro .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    #livro .section-title--light {
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .book-sub {
+      color: var(--color-gold-soft);
+      font-style: italic;
+      font-size: 1rem;
+    }
+
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .book-card {
+      background: var(--color-bg-dark);
+      border: 1px solid var(--color-secondary);
+      border-radius: var(--radius);
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 18px rgba(201,164,74,0.12);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .book-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(201,164,74,0.28);
+    }
+
+    .book-cover {
+      width: 160px;
+      height: 220px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 0 auto;
+      border: 1px solid rgba(201,164,74,0.3);
+      box-shadow: 4px 4px 16px rgba(0,0,0,0.5);
+    }
+
+    .book-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .book-card:hover .book-cover img { transform: scale(1.04); }
+
+    .book-cover-placeholder {
+      width: 160px;
+      height: 220px;
+      background: linear-gradient(135deg, #1B2A4A, #2E4272);
+      border: 1px solid var(--color-secondary);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 4px 4px 16px rgba(0,0,0,0.5);
+    }
+
+    .book-cover-placeholder span {
+      color: var(--color-gold-soft);
+      font-family: var(--font-signature);
+      font-size: 0.85rem;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .book-cover-placeholder .book-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-card h3 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--color-text-inv);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1.3;
+    }
+
+    .book-subtitle {
+      color: var(--color-gold-soft);
+      font-size: 0.82rem;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .gold-divider {
+      width: 40px;
+      height: 1px;
+      border: none;
+      background: var(--color-secondary);
+      margin: 0.3rem auto;
+    }
+
+    .book-format {
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+    }
+
+    .btn-amazon {
+      display: inline-block;
+      background: var(--color-secondary);
+      color: var(--color-bg-dark);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      padding: 0.65rem 1.4rem;
+      border-radius: var(--radius);
+      text-transform: uppercase;
+      border: 2px solid var(--color-secondary);
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      margin-top: 0.5rem;
+    }
+
+    .btn-amazon:hover {
+      background: var(--color-gold-soft);
+      border-color: var(--color-gold-soft);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(201,164,74,0.3);
+    }
+
+    .books-caption {
+      text-align: center;
+      margin-top: 2rem;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+
+    /* ============================================================
+       SECTION 5 — SESSÃO PRIVADA (OFERTA)
+    ============================================================ */
+    #sessao {
+      background: linear-gradient(135deg, #0F1B30 0%, #1B2A4A 100%);
+      padding: 5.5rem 0;
+      position: relative;
+      text-align: center;
+    }
+
+    #sessao .gold-line-top {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #sessao .section-title--light {
+      font-size: clamp(1.6rem, 4vw, 2.5rem);
+      margin-bottom: 0.7rem;
+    }
+
+    .sessao-sub {
+      color: var(--color-secondary);
+      font-size: 1.1rem;
+      font-style: italic;
+      margin-bottom: 2.5rem;
+    }
+
+    .sessao-list {
+      display: inline-block;
+      text-align: left;
+      margin-bottom: 2.5rem;
+    }
+
+    .sessao-list li {
+      color: rgba(255,255,255,0.88);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .sessao-list .bullet {
+      color: var(--color-secondary);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .sessao-exclusivo {
+      color: var(--color-gold-soft);
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .sessao-below-btn {
+      display: block;
+      margin-top: 1rem;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.78rem;
+    }
+
+    /* ============================================================
+       SECTION 6 — FAQ
+    ============================================================ */
+    #faq {
+      background: var(--color-bg-light);
+      padding: 5rem 0;
+    }
+
+    #faq .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    #faq .section-title--dark {
+      font-size: clamp(1.3rem, 3vw, 1.85rem);
+    }
+
+    .accordion {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid rgba(27,42,74,0.12);
+      transition: background var(--transition);
+    }
+
+    .accordion-item:first-child { border-top: 1px solid rgba(27,42,74,0.12); }
+
+    .accordion-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.3rem 0;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--color-primary);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .accordion-icon {
+      color: var(--color-secondary);
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      transition: transform var(--transition);
+    }
+
+    .accordion-btn[aria-expanded="true"] .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding var(--transition);
+    }
+
+    .accordion-body.open {
+      max-height: 300px;
+    }
+
+    .accordion-body p {
+      padding-bottom: 1.3rem;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* ============================================================
+       SECTION 7 — CTA FINAL
+    ============================================================ */
+    #cta-final {
+      background: var(--color-primary);
+      padding: 6rem 0;
+      text-align: center;
+      position: relative;
+    }
+
+    #cta-final .gold-line-dec {
+      display: block;
+      width: 80px;
+      height: 2px;
+      background: var(--color-secondary);
+      margin: 0 auto 2.5rem;
+    }
+
+    #cta-final .section-title--light {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      margin-bottom: 0.8rem;
+    }
+
+    .cta-final-sub {
+      color: var(--color-secondary);
+      font-size: 1.1rem;
+      font-style: italic;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: var(--color-bg-dark);
+      padding: 2.5rem 0;
+      text-align: center;
+    }
+
+    .footer-monogram {
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 1.6rem;
+      color: var(--color-secondary);
+      letter-spacing: 4px;
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-links {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+      color: var(--color-gold-soft);
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover { color: var(--color-secondary); }
+
+    .footer-legal {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.75rem;
+    }
+
+    /* ============================================================
+       WHATSAPP FLOATING BUTTON
+    ============================================================ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50px;
+      padding: 0.85rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      z-index: 9999;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease, box-shadow var(--transition);
+      cursor: pointer;
+    }
+
+    .whatsapp-float.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .whatsapp-float:hover {
+      box-shadow: 0 10px 32px rgba(37,211,102,0.55);
+      transform: translateY(-3px);
+    }
+
+    .whatsapp-icon {
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .quem-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .quem-photo { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .pain-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+
+      .whatsapp-float .wsp-label { display: none; }
+      .whatsapp-float {
+        border-radius: 50%;
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .btn-primary { padding: 0.9rem 1.8rem; font-size: 0.9rem; }
+      .hero-h1 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       HERO — Imagem de fundo completa
+  ============================================================ -->
+  <section id="hero" aria-label="Fabiana Sá — Estrategista Emocional">
+
+    <!-- IMAGEM DE FUNDO TOTAL -->
+    <img
+      class="hero-bg-img"
+      src="homem na montanha.png"
+      alt=""
+      aria-hidden="true"
+      onerror="this.src='homem na montanha.jpg'"
+    />
+
+    <!-- OVERLAYS: gradiente escurece à direita para legibilidade -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-overlay-bottom" aria-hidden="true"></div>
+
+    <!-- COPY — flutua sobre a imagem, alinhada à direita -->
+    <div class="hero-copy">
+      <div class="hero-content">
+
+        <span class="gold-line fade-in"></span>
+        <p class="hero-tagline fade-in">Estratégia Emocional · Homens de Alta Performance</p>
+
+        <h1 class="hero-h1 fade-in">
+          Você domina<br />o mundo lá fora.<br />
+          Mas por que tudo<br />parece desmoronar<br />aqui dentro?
+        </h1>
+
+        <div class="hero-divider fade-in" aria-hidden="true"></div>
+
+        <p class="hero-sub fade-in">
+          Para o homem que é referência para todos —<br />menos para si mesmo.
+        </p>
+
+        <p class="hero-para fade-in">
+          Se a sua vida profissional funciona no mais alto nível, mas seus
+          relacionamentos estão em crise, sua mente não descansa e você sente
+          que algo essencial está faltando — este espaço foi criado para você.
+        </p>
+
+        <div class="hero-cta-group">
+          <a
+            href="https://wa.me/5561991766002"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary fade-in"
+            aria-label="Solicitar sessão privada via WhatsApp"
+          >
+            Quero uma sessão privada →
+          </a>
+        </div>
+
+        <span class="signature fade-in">Fabiana Sá</span>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       DOR — IDENTIFICAÇÃO
+  ============================================================ -->
+  <section id="dor" aria-label="Identificação de dor">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-line"></span>
+        <h2 class="section-title section-title--dark fade-in">Reconhece algum desses cenários?</h2>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card fade-in">
+          <h3>Tudo sob controle, menos a própria mente</h3>
+          <p>Você resolve tudo — menos o barulho interno que não para.</p>
+        </div>
+        <div class="pain-card fade-in">
+          <h3>Ser referência para muitos não garante paz</h3>
+          <p>Admirado por todos. Sozinho consigo mesmo.</p>
+        </div>
+        <div class="pain-card fade-in">
+          <h3>Relacionamento não é lugar de medo</h3>
+          <p>Mas virou campo minado. E você não sabe mais como agir.</p>
+        </div>
+        <div class="pain-card fade-in">
+          <h3>Viver em alerta constante desgasta</h3>
+          <p>Alta performance não pode ser seu estado permanente de sobrevivência.</p>
+        </div>
+        <div class="pain-card fade-in">
+          <h3>Desabafar não é resolver</h3>
+          <p>Você sabe que precisa de método, não de desabafo.</p>
+        </div>
+        <div class="pain-card fade-in">
+          <h3>A vida é curta para apenas suportar</h3>
+          <p>Suportar não é viver. E você sabe disso.</p>
+        </div>
+      </div>
+      <p class="dor-close fade-in">
+        "Se você se identificou com pelo menos um desses pontos, você está no lugar certo."
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       QUEM É FABIANA SÁ — ABOUT AMPLIADO
+  ============================================================ -->
+  <section id="quem-e" aria-label="Quem é Fabiana Sá">
+    <div class="container">
+      <div class="quem-grid">
+
+        <!-- COLUNA ESQUERDA: Texto + história -->
+        <div class="quem-text fade-in">
+          <span class="gold-line gold-line--left"></span>
+          <h2 class="section-title section-title--light">
+            Estratégia emocional.<br />
+            Não é terapia. Não é coach.<br />É método.
+          </h2>
+
+          <p>
+            Fabiana Sá é Estrategista Emocional especializada em homens de Alta Performance.
+            Com atuação em Crise Relacional, ela trabalha com precisão onde outros trabalham
+            com escuta. Seu método combina estrutura, direção e padrão — porque homens que
+            performam no mais alto nível precisam de ferramentas à altura do que vivem.
+          </p>
+
+          <!--
+            ══════════════════════════════════════════
+            HISTÓRIA PESSOAL — preencher com Fabiana
+            Ex: o que a levou a trabalhar com homens,
+            uma virada na sua própria trajetória,
+            por que esse público específico.
+            ══════════════════════════════════════════
+          -->
+          <div class="quem-story">
+            <p>
+              "[Espaço para a história pessoal da Fabiana — o que a trouxe até este trabalho,
+              o momento de virada, por que escolheu atender especificamente homens de alta
+              performance. Quanto mais real e específico, mais converte.]"
+            </p>
+          </div>
+
+          <p>
+            Não é sobre falar de sentimentos. É sobre entender o que está acontecendo,
+            ter clareza e agir com inteligência.
+          </p>
+
+          <!-- NÚMEROS DE AUTORIDADE -->
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Anos de atuação</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Homens atendidos</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">1</span>
+              <span class="stat-label">Livro publicado</span>
+            </div>
+          </div>
+          <!--
+            Ajuste os números acima com os dados reais da Fabiana.
+          -->
+
+          <div class="pillars">
+            <span class="pillar-badge">Leitura</span>
+            <span class="pillar-badge">Precisão</span>
+            <span class="pillar-badge">Estrutura</span>
+            <span class="pillar-badge">Direção</span>
+            <span class="pillar-badge">Padrão</span>
+            <span class="pillar-badge">Estratégia</span>
+          </div>
+        </div>
+
+        <!-- COLUNA DIREITA: Foto + credenciais -->
+        <div class="quem-photo fade-in">
+          <div class="book-cover" style="aspect-ratio: 3/4;">
+            <img
+              src="fabiana-foto.jpg"
+              alt="Foto de Fabiana Sá"
+              style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
+              loading="lazy"
+            />
+          </div>
+
+          <!--
+            CREDENCIAIS / FORMAÇÕES
+            Preencher com as formações reais da Fabiana.
+          -->
+          <div class="credentials">
+            <p class="credentials-title">Formação & Credenciais</p>
+            <div class="credential-item">
+              <span class="credential-dot" aria-hidden="true"></span>
+              <span>[Formação principal — ex: Psicóloga CRP 00/0000]</span>
+            </div>
+            <div class="credential-item">
+              <span class="credential-dot" aria-hidden="true"></span>
+              <span>[Especialização — ex: Pós em Terapia Cognitivo-Comportamental]</span>
+            </div>
+            <div class="credential-item">
+              <span class="credential-dot" aria-hidden="true"></span>
+              <span>[Certificação — ex: Master em PNL / Coaching Executivo]</span>
+            </div>
+            <div class="credential-item">
+              <span class="credential-dot" aria-hidden="true"></span>
+              <span>Autora: "Amar sem se Abandonar" (Amazon Kindle)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COMO FUNCIONA — 3 PASSOS
+  ============================================================ -->
+  <section id="como-funciona" aria-label="Como funciona o processo">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-line"></span>
+        <h2 class="section-title section-title--dark fade-in">Como funciona</h2>
+        <p class="sub-gray fade-in">Simples, direto e sem perda de tempo.</p>
+      </div>
+
+      <div class="steps-wrapper">
+
+        <!-- PASSO 1 -->
+        <div class="step-card fade-in">
+          <div class="step-number-wrap" aria-hidden="true">
+            <span class="step-number">01</span>
+          </div>
+          <h3 class="step-title">Entre em contato</h3>
+          <p class="step-desc">
+            Você envia uma mensagem pelo WhatsApp. Sem formulários longos,
+            sem burocracia. Apenas você e a Fabiana.
+          </p>
+          <span class="step-tag">WhatsApp</span>
+        </div>
+
+        <!-- PASSO 2 -->
+        <div class="step-card fade-in">
+          <div class="step-number-wrap" aria-hidden="true">
+            <span class="step-number">02</span>
+          </div>
+          <h3 class="step-title">Verificação de fit</h3>
+          <p class="step-desc">
+            Uma conversa rápida para entender o seu cenário e confirmar
+            se existe alinhamento. Sem compromisso. Com clareza.
+          </p>
+          <span class="step-tag">Online · Privado</span>
+        </div>
+
+        <!-- PASSO 3 -->
+        <div class="step-card fade-in">
+          <div class="step-number-wrap" aria-hidden="true">
+            <span class="step-number">03</span>
+          </div>
+          <h3 class="step-title">Sessão estratégica</h3>
+          <p class="step-desc">
+            Diagnóstico preciso da crise, identificação do padrão
+            e direção clara para os próximos passos. Com método.
+          </p>
+          <span class="step-tag">Resultado real</span>
+        </div>
+
+      </div>
+
+      <div class="steps-cta fade-in">
+        <a
+          href="https://wa.me/5561991766002"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+          aria-label="Iniciar o processo pelo WhatsApp"
+        >
+          Quero começar agora →
+        </a>
+        <p>Vagas limitadas. Processo seletivo para garantir resultado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DEPOIMENTOS
+  ============================================================ -->
+  <section id="depoimentos" aria-label="Depoimentos">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-line"></span>
+        <h2 class="section-title section-title--dark fade-in">
+          O que dizem os homens que já passaram pelo processo
+        </h2>
+        <p class="sub-gray fade-in">Resultados reais. Sem exageros.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-initial">R</div>
+          <blockquote>
+            "Eu achei que era o meu relacionamento que estava errado.
+            Descobri que era eu que estava operando no modo errado.
+            Em 6 semanas, tudo mudou de perspectiva."
+          </blockquote>
+          <p class="testimonial-author">R.M. — CEO, 47 anos</p>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-initial">T</div>
+          <blockquote>
+            "Não acreditava em processo emocional. Mas a Fabiana não trabalha
+            com emoção — trabalha com lógica e padrão. Me fez sentido imediato."
+          </blockquote>
+          <p class="testimonial-author">T.A. — Empresário, 41 anos</p>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-initial">L</div>
+          <blockquote>
+            "Vivia em alerta constante. Hoje entendo o que estava acontecendo
+            e tenho ferramentas reais para agir diferente."
+          </blockquote>
+          <p class="testimonial-author">L.S. — Executivo, 52 anos</p>
+        </div>
+      </div>
+      <p class="testimonials-disclaimer fade-in">
+        * Depoimentos ilustrativos. Resultados individuais podem variar.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LIVRO
+  ============================================================ -->
+  <section id="livro" aria-label="Livros de Fabiana Sá">
+    <span class="gold-line-top" aria-hidden="true"></span>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title section-title--light fade-in">Também autora</h2>
+        <p class="book-sub fade-in">Reflexões que vão além da sessão.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: start; max-width: 900px; margin: 0 auto;">
+        <style>
+          @media (min-width: 768px) {
+            div[style*="grid-template-columns: 1fr"] {
+              grid-template-columns: 300px 1fr !important;
+            }
+          }
+        </style>
+        <!-- LIVRO 1 — Capa -->
+        <div class="fade-in">
+          <a
+            href="https://a.co/d/05lUcK8d"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Comprar Amar sem se Abandonar na Amazon"
+          >
+            <div class="book-cover" style="width: 100%; height: auto;">
+              <img
+                src="capa livro 1 amar.jpg"
+                alt="Capa do livro Amar sem se Abandonar — Fabiana Sá"
+                loading="lazy"
+              />
+            </div>
+          </a>
+          <div style="text-align: center; margin-top: 1.5rem;">
+            <a
+              href="https://a.co/d/05lUcK8d"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-amazon"
+            >
+              🛒 Comprar na Amazon →
+            </a>
+          </div>
+        </div>
+
+        <!-- LIVRO 1 — Descrição -->
+        <div class="fade-in" style="color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.8;">
+          <h3 style="font-family: var(--font-heading); font-weight: 800; font-size: 1.3rem; color: var(--color-text-inv); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.8rem;">
+            Amar sem se Abandonar
+          </h3>
+          <p style="color: var(--color-gold-soft); font-style: italic; margin-bottom: 1.5rem; font-size: 0.95rem;">
+            O equilíbrio entre amar o outro e não se perder de si
+          </p>
+
+          <p style="margin-bottom: 1.2rem;">
+            Você já se pegou colocando as necessidades de todos acima das suas? Já aceitou menos do que merecia por medo de perder alguém? Já sentiu culpa ao dizer "não", dificuldade em estabelecer limites ou a sensação de que precisava se esforçar constantemente para ser amada?
+          </p>
+
+          <p style="margin-bottom: 1.2rem;">
+            Se essas perguntas tocaram você, este livro foi escrito para a sua jornada.
+          </p>
+
+          <p style="margin-bottom: 1.2rem;">
+            Em <strong>"Amar sem se Abandonar"</strong>, você será conduzida a uma reflexão profunda sobre os padrões emocionais que levam muitas mulheres a se anularem dentro dos relacionamentos. Com sensibilidade, experiência prática e uma abordagem transformadora, a autora explora temas como autoabandono, ausência paterna, carência afetiva, dependência emocional, culpa, submissão e a busca por validação.
+          </p>
+
+          <p style="margin-bottom: 1.2rem;">
+            Ao compartilhar vivências pessoais e aprendizados construídos ao longo de sua trajetória, a autora mostra que o amor não exige que você perca a si mesma para manter alguém ao seu lado.
+          </p>
+
+          <p style="margin-bottom: 1.5rem; font-weight: 600; color: var(--color-gold-soft);">
+            Você aprenderá a:
+          </p>
+
+          <ul style="margin-bottom: 1.5rem; margin-left: 1.5rem;">
+            <li style="margin-bottom: 0.6rem;">✓ Reconhecer sinais de autoabandono emocional</li>
+            <li style="margin-bottom: 0.6rem;">✓ Entender como experiências da infância influenciam seus relacionamentos atuais</li>
+            <li style="margin-bottom: 0.6rem;">✓ Desenvolver amor-próprio sem cair no egoísmo</li>
+            <li style="margin-bottom: 0.6rem;">✓ Estabelecer limites saudáveis sem culpa</li>
+            <li style="margin-bottom: 0.6rem;">✓ Romper ciclos de dependência emocional</li>
+            <li style="margin-bottom: 1.2rem;">✓ Construir relacionamentos baseados em respeito, consciência e reciprocidade</li>
+          </ul>
+
+          <p style="margin-bottom: 1.2rem; font-style: italic; color: var(--color-gold-soft);">
+            Porque amar alguém não deveria custar a sua própria essência.
+          </p>
+
+          <p style="font-weight: 600;">
+            Chegou o momento de aprender que uma relação saudável começa quando você deixa de se abandonar para ser escolhida e passa a escolher a si mesma também.
+          </p>
+
+          <p style="margin-top: 1.5rem; font-size: 0.85rem; color: rgba(255,255,255,0.5);">
+            eBook Kindle · Fabiana Sá
+          </p>
+        </div>
+      </div>
+      <p class="books-caption fade-in">Clique na capa para adquirir o livro na Amazon Kindle.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SESSÃO PRIVADA — OFERTA
+  ============================================================ -->
+  <section id="sessao" aria-label="Sessão Estratégica Privada">
+    <span class="gold-line-top" aria-hidden="true"></span>
+    <div class="container">
+      <div class="fade-in">
+        <h2 class="section-title section-title--light">Sessão Estratégica Privada</h2>
+        <p class="sessao-sub">Um espaço de precisão para quem não tem tempo a perder.</p>
+      </div>
+      <ul class="sessao-list fade-in">
+        <li><span class="bullet">✦</span> Diagnóstico da crise emocional ou relacional</li>
+        <li><span class="bullet">✦</span> Identificação do padrão que está travando você</li>
+        <li><span class="bullet">✦</span> Direção clara e estrutura para os próximos passos</li>
+        <li><span class="bullet">✦</span> Sem julgamento. Sem rodeios. Com método.</li>
+      </ul>
+      <p class="sessao-exclusivo fade-in">
+        Vagas limitadas. Processo seletivo para garantir fit e resultado.
+      </p>
+      <a
+        href="https://wa.me/5561991766002"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary fade-in"
+        aria-label="Solicitar sessão privada via WhatsApp"
+      >
+        Solicitar minha sessão privada →
+      </a>
+      <span class="sessao-below-btn fade-in">
+        Você será direcionado ao WhatsApp para verificação de disponibilidade.
+      </span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+  ============================================================ -->
+  <section id="faq" aria-label="Perguntas Frequentes">
+    <div class="container">
+      <div class="section-header">
+        <span class="gold-line"></span>
+        <h2 class="section-title section-title--dark fade-in">Perguntas Frequentes</h2>
+      </div>
+      <div class="accordion" role="list">
+
+        <div class="accordion-item fade-in" role="listitem">
+          <button
+            class="accordion-btn"
+            aria-expanded="false"
+            aria-controls="faq1"
+          >
+            Isso é terapia?
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-body" id="faq1" role="region">
+            <p>
+              Não. É estratégia emocional. Trabalhamos com método, estrutura e direção
+              — não com análise prolongada do passado.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item fade-in" role="listitem">
+          <button
+            class="accordion-btn"
+            aria-expanded="false"
+            aria-controls="faq2"
+          >
+            Preciso estar em crise para buscar o processo?
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-body" id="faq2" role="region">
+            <p>
+              Não necessariamente. Muitos homens buscam o processo preventivamente,
+              para elevar o nível de consciência e performance nos relacionamentos.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item fade-in" role="listitem">
+          <button
+            class="accordion-btn"
+            aria-expanded="false"
+            aria-controls="faq3"
+          >
+            Como funciona a sessão privada?
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-body" id="faq3" role="region">
+            <p>
+              Após o contato pelo WhatsApp, há uma verificação de disponibilidade.
+              A sessão é realizada de forma online e privada.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item fade-in" role="listitem">
+          <button
+            class="accordion-btn"
+            aria-expanded="false"
+            aria-controls="faq4"
+          >
+            Funciona para homens de qualquer estado civil?
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-body" id="faq4" role="region">
+            <p>
+              Sim. Solteiros, separados, divorciados, viúvos ou em relacionamento
+              — o método se adapta ao seu cenário atual.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA FINAL
+  ============================================================ -->
+  <section id="cta-final" aria-label="Call to Action Final">
+    <div class="container">
+      <span class="gold-line-dec" aria-hidden="true"></span>
+      <h2 class="section-title section-title--light fade-in">
+        Chega de suportar em silêncio.
+      </h2>
+      <p class="cta-final-sub fade-in">O próximo passo é seu.</p>
+      <a
+        href="https://wa.me/5561991766002"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary fade-in"
+        aria-label="Falar com Fabiana Sá via WhatsApp"
+      >
+        Falar com Fabiana Sá →
+      </a>
+      <span class="signature fade-in">Fabiana Sá</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer role="contentinfo">
+    <span class="footer-monogram" aria-label="Monograma Fabiana Sá">FS</span>
+    <div class="footer-links">
+      <a
+        href="https://instagram.com/falafabioficial"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram de Fabiana Sá"
+      >
+        @falafabioficial
+      </a>
+    </div>
+    <p class="footer-legal">© 2026 Fabiana Sá · Estrategista Emocional</p>
+  </footer>
+
+  <!-- ============================================================
+       WHATSAPP FLOATING BUTTON
+  ============================================================ -->
+  <a
+    href="https://wa.me/5561991766002"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    id="whatsappFloat"
+    aria-label="Sessão Privada pelo WhatsApp"
+  >
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    <span class="wsp-label">Sessão Privada</span>
+  </a>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    // --- Intersection Observer: fade-in on scroll ---
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    // Trigger hero elements immediately
+    document.querySelectorAll('#hero .fade-in').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), i * 180);
+    });
+
+    // --- WhatsApp float: show after 3s ---
+    setTimeout(() => {
+      const btn = document.getElementById('whatsappFloat');
+      if (btn) btn.classList.add('show');
+    }, 3000);
+
+    // --- Accordion FAQ ---
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        // Close all
+        document.querySelectorAll('.accordion-btn').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          const body = document.getElementById(b.getAttribute('aria-controls'));
+          if (body) body.classList.remove('open');
+        });
+        // Toggle current
+        if (!expanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          const body = document.getElementById(btn.getAttribute('aria-controls'));
+          if (body) body.classList.add('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
